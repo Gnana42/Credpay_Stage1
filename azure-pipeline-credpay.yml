@@ -44,7 +44,7 @@ stages:
               containerRegistry: 'ACRSC'
               repository: '$(paymentrepository)'
               command: 'buildAndPush'
-              Dockerfile: 'payment-service/Dockerfile'
+              Dockerfile: 'payment-service/dockerfile'
               buildContext: 'payment-service'
               tags: |
                 $(tag)
