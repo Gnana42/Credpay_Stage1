@@ -28,6 +28,28 @@ stages:
                 $(tag)
                 latest
 
+          - task: Docker@2
+            inputs:
+              containerRegistry: 'ACRSC'
+              repository: '$(userrepository)'
+              command: 'buildAndPush'
+              Dockerfile: 'user-service/dockerfile'
+              buildContext: 'user-service'
+              tags: |
+                $(tag)
+                latest
+
+          - task: Docker@2
+            inputs:
+              containerRegistry: 'ACRSC'
+              repository: '$(paymentrepository)'
+              command: 'buildAndPush'
+              Dockerfile: 'payment-service/Dockerfile'
+              buildContext: 'payment-service'
+              tags: |
+                $(tag)
+                latest
+
 
 
         
