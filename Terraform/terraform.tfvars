@@ -1,0 +1,15 @@
+subscription_id               = "9071c72f-0ffa-4d6a-98e0-f2dd54a13284"
+location                      = "canadacentral"
+vnet_address_space            = "10.0.0.0/16"
+aks_subnet_prefix             = "10.0.1.0/24"
+postgres_subnet_prefix        = "10.0.2.0/24"
+node_count                    = 2
+min_node_count                = 2
+max_node_count                = 2
+vm_size                       = "Standard_DS2alds_v6"
+postgres_version              = "17"
+postgres_admin_username       = "credpayadmin"
+database_name                 = "credpay"
+log_retention_days            = 30
+key_vault_name                = "credpaykey-vault"
+key_vault_resource_group_name = "Capstone-RG"
