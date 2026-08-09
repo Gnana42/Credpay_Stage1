@@ -26,6 +26,7 @@ stages:
             inputs:
               provider: 'azurerm'
               command: 'init'
+              workingDirectory: Terraform
               backendAzureRmUseEntraIdForAuthentication: false
               backendServiceArm: 'Jarvis-Manual'
               backendAzureRmResourceGroupName: 'Capstone-RG'
@@ -38,12 +39,14 @@ stages:
             inputs:
               provider: 'azurerm'
               command: 'validate'
+              workingDirectory: Terraform
 
           - task: TerraformTask@5
             displayName: "Terraform Plan"
             inputs:
               provider: 'azurerm'
               command: 'plan'
+              workingDirectory: Terraform
 
 
 
