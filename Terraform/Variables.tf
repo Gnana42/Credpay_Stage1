@@ -39,7 +39,7 @@ variable "max_node_count" {
 
 variable "vm_size" {
   type    = string
-  default = "Standard_DS2alds_v6"
+  default = "Standard_DS2_v2"
 }
 
 variable "postgres_version" {
