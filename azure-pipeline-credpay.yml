@@ -47,6 +47,7 @@ stages:
               provider: 'azurerm'
               command: 'plan'
               workingDirectory: Terraform
+              environmentServiceNameAzureRM: 'Jarvis-Manual'
 
 
 
