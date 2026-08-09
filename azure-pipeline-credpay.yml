@@ -49,6 +49,15 @@ stages:
               workingDirectory: Terraform
               environmentServiceNameAzureRM: 'Jarvis-Manual'
 
+          - task: TerraformTask@5
+            displayName: "Resource creation with terraform"
+            inputs:
+              provider: 'azurerm'
+              command: 'apply'
+              commandOptions: '-var-file="terraform.tfvars" --auto-approve'
+              workingDirectory: Terraform
+              environmentServiceNameAzureRM: 'Jarvis-Manual'
+
 
 
 
