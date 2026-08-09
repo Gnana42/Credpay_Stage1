@@ -1,30 +1,30 @@
 output "server_id" {
-  description = "PostgreSQL Flexible Server resource ID."
-  value       = azurerm_postgresql_flexible_server.this.id
+  description = "The ID of the PostgreSQL server."
+  value       = azurerm_postgresql_flexible_server.pgs.id
 }
 
 output "server_name" {
-  description = "PostgreSQL Flexible Server name."
-  value       = azurerm_postgresql_flexible_server.this.name
+  description = "The name of the PostgreSQL server."
+  value       = azurerm_postgresql_flexible_server.pgs.name
 }
 
 output "fqdn" {
-  description = "Public FQDN of the server (Phase 1 public access)."
-  value       = azurerm_postgresql_flexible_server.this.fqdn
+  description = "The fully qualified domain name of the PostgreSQL server."
+  value       = azurerm_postgresql_flexible_server.pgs.fqdn
 }
 
 output "database_name" {
-  description = "Application database name."
-  value       = azurerm_postgresql_flexible_server_database.credpay.name
+  description = "The name of the PostgreSQL database."
+  value       = azurerm_postgresql_flexible_server_database.pgdb.name
 }
 
 output "admin_username" {
-  description = "Administrator username."
-  value       = azurerm_postgresql_flexible_server.this.administrator_login
+  description = "The administrator username for the PostgreSQL server."
+  value       = azurerm_postgresql_flexible_server.pgs.administrator_login
 }
 
 output "admin_password" {
-  description = "Generated administrator password."
+  description = "The administrator password for the PostgreSQL server."
   value       = random_password.admin.result
   sensitive   = true
 }
